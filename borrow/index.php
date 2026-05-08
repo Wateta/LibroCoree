@@ -48,7 +48,7 @@ $pageTitle='Borrow & Return'; $pageSubtitle='Manage book circulation'; $prefix='
   <!-- Borrow Form -->
   <div>
     <div class="card" style="margin-bottom:20px;">
-      <div class="card-header"><h3>📖 Record a Borrow</h3></div>
+      <div class="card-header"><h3> Record a Borrow</h3></div>
       <div class="card-body">
         <form method="POST">
           <div class="form-grid">

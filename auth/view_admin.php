@@ -18,25 +18,21 @@ $pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../
 <div class="page-body">
   <div class="card">
     <div class="card-header">
-      <h3>All Books</h3>
-      <a href="add_book.php" class="btn btn-sm btn-icon">＋ Add Book</a>
+      <h3>All Admins</h3>
+      <a href="add_admin.php" class="btn btn-sm btn-icon">＋ Add Admin</a>
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>#</th><th>Title</th><th>Author</th><th>Category</th><th>Qty</th><th>Year</th><th>ISBN</th><th>Actions</th></tr></thead>
+        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Actions</th></tr></thead>
         <tbody>
         <?php $c=0; while($row=mysqli_fetch_assoc($result)): $c++; ?>
           <tr>
             <td class="td-muted"><?=$row['id']?></td>
-            <td class="td-title"><?=htmlspecialchars($row['title'])?></td>
-            <td class="td-muted"><?=htmlspecialchars($row['author'])?></td>
-            <td><span class="badge badge-cat"><?=htmlspecialchars($row['category']?:'—')?></span></td>
-            <td><span class="badge <?=$row['quantity']<=2?'badge-low':'badge-qty'?>"><?=$row['quantity']?></span></td>
-            <td class="td-muted"><?=$row['published_year']?></td>
-            <td class="td-muted" style="font-size:12px;font-family:monospace;"><?=htmlspecialchars($row['isbn'])?></td>
+            <td class="td-title"><?=htmlspecialchars($row['username'])?></td>
+            <td class="td-muted"><?=htmlspecialchars($row['email'])?></td>
             <td><div class="action-links">
-              <a href="edit_book.php?id=<?=$row['id']?>" class="btn btn-sm btn-secondary">Edit</a>
-              <a href="delete_book.php?id=<?=$row['id']?>" class="btn btn-sm btn-danger" onclick="return confirm('Delete this book?')">Delete</a>
+              <a href="edit_admin.php?id=<?=$row['id']?>" class="btn btn-sm btn-secondary">Edit</a>
+              <a href="delete_admin.php?id=<?=$row['id']?>" class="btn btn-sm btn-danger" onclick="return confirm('Delete this admin?')">Delete</a>
             </div></td>
           </tr>
         <?php endwhile; if($c===0): ?>

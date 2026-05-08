@@ -3,21 +3,19 @@ include '../config/db.php';
 include '../auth/auth_check.php';
 $msg='';
 if(isset($_POST['add_book'])){
-  $t=mysqli_real_escape_string($conn,$_POST['title']);
-  $a=mysqli_real_escape_string($conn,$_POST['author']);
-  $cat=mysqli_real_escape_string($conn,$_POST['category']);
-  $q=intval($_POST['quantity']);
-  $y=intval($_POST['published_year']);
-  $isbn=mysqli_real_escape_string($conn,$_POST['isbn']);
-  if(mysqli_query($conn,"INSERT INTO books(title,author,category,quantity,published_year,isbn) VALUES('$t','$a','$cat',$q,$y,'$isbn')"))
+  $t=mysqli_real_escape_string($conn,$_POST['name']);
+  $a=mysqli_real_escape_string($conn,$_POST['email']);
+  $cat=mysqli_real_escape_string($conn,$_POST['password']);
+
+  if(mysqli_query($conn,"INSERT INTO users(name,email,password) VALUES('$t','$a','$cat')"))
     $msg='success';
   else $msg='Error: '.mysqli_error($conn);
 }
-$pageTitle='Add New Book'; $pageSubtitle='Enter book details below'; $prefix='../';
+$pageTitle='Add New Admin'; $pageSubtitle='Enter admin details below'; $prefix='../';
 ?>
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Add Book — libroCore</title>
+<title>Add Admin — libroCore</title>
 <?php include '../includes/theme.php'; ?>
 <link rel="stylesheet" href="../assets/style.css">
 </head><body>
@@ -29,14 +27,14 @@ $pageTitle='Add New Book'; $pageSubtitle='Enter book details below'; $prefix='..
   <div style="max-width:600px;">
     <div class="form-card">
       <h2>Admin Details</h2>
-      <p class="form-subtitle">Fill in the information for the new book</p>
+      <p class="form-subtitle">Fill in the information for the new admin</p>
       <?php if($msg==='success'): ?><div class="message">✓ Admin added! <a href="view_books.php">View all →</a></div>
       <?php elseif($msg): ?><div class="alert alert-error">⚠ <?=$msg?></div><?php endif; ?>
       <form method="POST">
         <div class="form-grid">
-          <div class="input-group span-2"><label>Name</label><input type="text" name="title" placeholder="e.g. Smith.T" required></div>
-          <div class="input-group span-2"><label>Email</label><input type="email" name="author" placeholder="e.g  smith@example.com" required></div>
-          <div class="input-group"><label>password</label><input type="password" name="category" placeholder="e.g. ........." required></div>
+          <div class="input-group span-2"><label>Name</label><input type="text" name="name" placeholder="e.g. Smith.T" required></div>
+          <div class="input-group span-2"><label>Email</label><input type="email" name="email" placeholder="e.g  smith@example.com" required></div>
+          <div class="input-group"><label>password</label><input type="password" name="password" placeholder="e.g. ........." required></div>
          
        
         </div>

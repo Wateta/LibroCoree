@@ -74,7 +74,7 @@ $pageTitle='Borrow & Return'; $pageSubtitle='Manage book circulation'; $prefix='
               <input type="date" name="due_date" value="<?=date('Y-m-d',strtotime('+14 days'))?>" required>
             </div>
           </div>
-          <button type="submit" name="borrow_book" class="btn">📖 Record Borrow</button>
+          <button type="submit" name="borrow_book" class="btn"> Record Borrow</button>
         </form>
       </div>
     </div>

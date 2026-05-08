@@ -1,13 +1,13 @@
 <?php
 include '../config/db.php';
 include '../auth/auth_check.php';
-$sql = "SELECT * FROM users ORDER BY id DESC";
+$sql = "SELECT * FROM users  BY id DESC";
 $result = mysqli_query($conn,$sql);
-$pageTitle='Book Catalog'; $pageSubtitle='All books in your library'; $prefix='../';
+$pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../';
 ?>
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>All Books — libroCore</title>
+<title>All Admins — libroCore</title>
 <?php include '../includes/theme.php'; ?>
 <link rel="stylesheet" href="../assets/style.css">
 </head><body>

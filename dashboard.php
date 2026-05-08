@@ -27,7 +27,7 @@ $pageTitle='Dashboard'; $pageSubtitle='Welcome back, '.htmlspecialchars($_SESSIO
 
   <!-- Stats -->
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-label">Total Books</div><div class="stat-value"><?=$total_books?></div><div class="stat-sub">titles in catalog</div><span class="stat-icon">📚</span></div>
+    <div class="stat-card"><div"">Total Books</div><div class="stat-value"><?=$total_books?></div><div class="stat-sub">titles in catalog</div><span class="stat-icon">📚</span></div>
     <div class="stat-card ic"><div class="stat-label">Total Authors</div><div class="stat-value"><?=$total_authors?></div><div class="stat-sub">unique authors</div><span class="stat-icon">✍️</span></div>
     <div class="stat-card sc"><div class="stat-label">Categories</div><div class="stat-value"><?=$total_cats?></div><div class="stat-sub">genres tracked</div><span class="stat-icon">🏷️</span></div>
     <div class="stat-card wc"><div class="stat-label">Total Copies</div><div class="stat-value"><?=$total_qty?></div><div class="stat-sub">physical copies</div><span class="stat-icon">📦</span></div>

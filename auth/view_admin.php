@@ -6,7 +6,11 @@ $sql = "SELECT * FROM users ORDER BY id DESC";
 $result = mysqli_query($conn,$sql);
 
 if(!$result){
-    die("Query failed: " . mysqli_error($conn));
+    die("DB ERROR: " . mysqli_error($conn));
+}
+
+if(mysqli_num_rows($result) == 0){
+    die("No admins found in database.");
 }
 $pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../';
 ?>

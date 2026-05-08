@@ -31,7 +31,7 @@ $pageTitle='Search Books'; $pageSubtitle='Find any book in your catalog'; $hideS
           <label>Search books, authors, categories, ISBN</label>
           <input type="text" name="q" value="<?=htmlspecialchars($q)?>" placeholder="e.g. Harry Potter, Fiction, 978..." autofocus>
         </div>
-        <button type="submit" class="btn btn-icon" style="width:auto;padding:12px 28px;">🔍 Search</button>
+        <button type="submit" class="btn btn-icon" style="width:auto;padding:12px 28px;">Search</button>
       </form>
     </div>
   </div>

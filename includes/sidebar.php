@@ -20,6 +20,7 @@ function isActive($pages){ global $current,$dir;
     <li><a href="<?=($dir=='borrow')?'':'borrow/'?>index.php" class="<?=isActive(['borrow'])?>"><span class="ni"></span> Borrow & Return</a></li>
     <span class="nav-label">Account</span>
     <li><a href="/y1B_programs/libroCore-v2/auth/add_admin.php">👤 Add Admin</a></li>
+    <li><a href="/y1B_programs/libroCore-v2/auth/view_admins.php">👥 View Admins</a></li>
     <li><a href="<?=($dir=='profile')?'':'profile/'?>index.php" class="<?=isActive(['profile'])?>"><span class="ni">👤</span> My Profile</a></li>
     <li><a href="<?=($dir=='settings')?'':'settings/'?>index.php" class="<?=isActive(['settings'])?>"><span class="ni">⚙</span> Settings</a></li>
   </ul>

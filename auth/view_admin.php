@@ -36,7 +36,7 @@ $pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../
             </div></td>
           </tr>
         <?php endwhile; if($c===0): ?>
-          <tr><td colspan="8"><div class="empty-state"><span class="es-icon">📚</span><h3>No books yet</h3><p><a href="add_book.php">Add your first book →</a></p></div></td></tr>
+          <tr><td colspan="8"><div class="empty-state"><span class="es-icon">📚</span><h3>No admins yet</h3><p><a href="add_admin.php">Add your first admin →</a></p></div></td></tr>
         <?php endif; ?>
         </tbody>
       </table>

@@ -1,8 +1,7 @@
 <?php
 include '../config/db.php';
 include '../auth/auth_check.php';
-$sql = "SELECT * FROM users ORDER BY id DESC";
-$result = mysqli_query($conn,$sql);
+
 $pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../';
 ?>
 <!DOCTYPE html><html lang="en"><head>

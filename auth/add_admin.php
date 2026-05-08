@@ -7,7 +7,7 @@ if(isset($_POST['add_book'])){
   $a=mysqli_real_escape_string($conn,$_POST['email']);
   $cat=mysqli_real_escape_string($conn,$_POST['password']);
 
-  if(mysqli_query($conn,"INSERT INTO users(name,email,password) VALUES('$t','$a','$cat')"))
+  if(mysqli_query($conn,"INSERT INTO users(username,email,password) VALUES('$t','$a','$cat')"))
     $msg='success';
   else $msg='Error: '.mysqli_error($conn);
 }

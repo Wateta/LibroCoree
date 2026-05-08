@@ -28,16 +28,16 @@ $pageTitle='Add New Book'; $pageSubtitle='Enter book details below'; $prefix='..
 <div class="page-body">
   <div style="max-width:600px;">
     <div class="form-card">
-      <h2>Book Details</h2>
+      <h2>Admin Details</h2>
       <p class="form-subtitle">Fill in the information for the new book</p>
-      <?php if($msg==='success'): ?><div class="message">✓ Book added! <a href="view_books.php">View all →</a></div>
+      <?php if($msg==='success'): ?><div class="message">✓ Admin added! <a href="view_books.php">View all →</a></div>
       <?php elseif($msg): ?><div class="alert alert-error">⚠ <?=$msg?></div><?php endif; ?>
       <form method="POST">
         <div class="form-grid">
-          <div class="input-group span-2"><label>Name</label><input type="text" name="title" placeholder="e.g. The Great Gatsby" required></div>
-          <div class="input-group span-2"><label>Email</label><input type="text" name="author" placeholder="e.g. F. Scott Fitzgerald" required></div>
-          <div class="input-group"><label>password</label><input type="text" name="category" placeholder="e.g. Fiction"></div>
-          <div class="input-group"><label>Quantity</label><input type="number" name="quantity" value="1" min="0"></div>
+          <div class="input-group span-2"><label>Name</label><input type="text" name="title" placeholder="e.g. Smith.T" required></div>
+          <div class="input-group span-2"><label>Email</label><input type="email" name="author" placeholder="e.g  smith@example.com" required></div>
+          <div class="input-group"><label>password</label><input type="password" name="category" placeholder="e.g. ........." required></div>
+         
        
         </div>
         <div class="form-actions">

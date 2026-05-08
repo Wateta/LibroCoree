@@ -34,16 +34,15 @@ $pageTitle='Add New Book'; $pageSubtitle='Enter book details below'; $prefix='..
       <?php elseif($msg): ?><div class="alert alert-error">⚠ <?=$msg?></div><?php endif; ?>
       <form method="POST">
         <div class="form-grid">
-          <div class="input-group span-2"><label>Book Title</label><input type="text" name="title" placeholder="e.g. The Great Gatsby" required></div>
-          <div class="input-group span-2"><label>Author</label><input type="text" name="author" placeholder="e.g. F. Scott Fitzgerald" required></div>
-          <div class="input-group"><label>Category</label><input type="text" name="category" placeholder="e.g. Fiction"></div>
+          <div class="input-group span-2"><label>Name</label><input type="text" name="title" placeholder="e.g. The Great Gatsby" required></div>
+          <div class="input-group span-2"><label>Email</label><input type="text" name="author" placeholder="e.g. F. Scott Fitzgerald" required></div>
+          <div class="input-group"><label>password</label><input type="text" name="category" placeholder="e.g. Fiction"></div>
           <div class="input-group"><label>Quantity</label><input type="number" name="quantity" value="1" min="0"></div>
-          <div class="input-group"><label>Published Year</label><input type="number" name="published_year" placeholder="2024"></div>
-          <div class="input-group"><label>ISBN</label><input type="text" name="isbn" placeholder="978-x-xx-xxxxxx-x"></div>
+       
         </div>
         <div class="form-actions">
           <a href="view_books.php" class="btn btn-secondary">Cancel</a>
-          <button type="submit" name="add_book" class="btn">Add Book</button>
+          <button type="submit" name="add_book" class="btn">Add Admin</button>
         </div>
       </form>
     </div>

@@ -19,7 +19,7 @@ function isActive($pages){ global $current,$dir;
     <span class="nav-label">Circulation</span>
     <li><a href="<?=($dir=='borrow')?'':'borrow/'?>index.php" class="<?=isActive(['borrow'])?>"><span class="ni"></span> Borrow & Return</a></li>
     <span class="nav-label">Account</span>
-    <li><a href="<?=($dir=='admin')?'':'admin/'?>view_admin.php" class="<?=isActive(['view_admin'])?>"><span class="ni">👤</span> All Admins</a></li>
+    <li></li>
     <li><a href="<?=($dir=='profile')?'':'profile/'?>index.php" class="<?=isActive(['profile'])?>"><span class="ni">👤</span> My Profile</a></li>
     <li><a href="<?=($dir=='settings')?'':'settings/'?>index.php" class="<?=isActive(['settings'])?>"><span class="ni">⚙</span> Settings</a></li>
   </ul>

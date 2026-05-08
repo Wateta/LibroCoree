@@ -2,6 +2,12 @@
 include '../config/db.php';
 include '../auth/auth_check.php';
 
+$sql = "SELECT * FROM users ORDER BY id DESC";
+$result = mysqli_query($conn,$sql);
+
+if(!$result){
+    die("Query failed: " . mysqli_error($conn));
+}
 $pageTitle='Admin List'; $pageSubtitle='All admins in your system'; $prefix='../';
 ?>
 <!DOCTYPE html><html lang="en"><head>
